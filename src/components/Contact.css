@@ -1,0 +1,125 @@
+.contact-section {
+  background: var(--bg2);
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contact__intro {
+  color: var(--text2);
+  line-height: 1.8;
+  font-size: 16px;
+  margin-bottom: 36px;
+}
+
+.contact__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact__card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+}
+.contact__card:hover {
+  border-color: var(--accent);
+  transform: translateX(4px);
+}
+
+.contact__card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  background: var(--tag-bg);
+  border-radius: var(--radius-sm);
+  color: var(--accent2);
+  flex-shrink: 0;
+}
+
+.contact__card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.contact__card-label {
+  font-size: 11px;
+  font-family: var(--mono);
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.contact__card-value {
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* Form */
+.contact__form {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact__form-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact__label {
+  font-size: 13px;
+  font-family: var(--mono);
+  color: var(--text2);
+}
+
+.contact__input {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 14px;
+  transition: border-color var(--transition);
+  outline: none;
+  width: 100%;
+}
+.contact__input:focus {
+  border-color: var(--accent);
+}
+.contact__input::placeholder { color: var(--text3); }
+
+.contact__textarea { resize: vertical; min-height: 120px; }
+
+.contact__submit {
+  align-self: flex-start;
+}
+
+@media (max-width: 860px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
